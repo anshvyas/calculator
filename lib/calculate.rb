@@ -1,11 +1,16 @@
 
 class Calculator
+
+	def initialize()
+	end
+
 	def self.add(input)
 		if input.empty?
 			0
 		else
 			numbers = input.split(",").map { |num| num.to_i }
 			numbers.inject(0){|result,element| result+element}
+
 		end
 	end
 
@@ -36,6 +41,11 @@ class Calculator
 		end
 	end
 
+	def self.quit()
+		abort("Thank You")
+	end
+
+
 end
 
 def main()
@@ -49,26 +59,22 @@ def main()
 
 	puts "Kindly Enter your choice :"
 	choice = gets.chomp
-	# puts choice
 
 	if choice == 'quit'
-		quit()
+		Calculator.quit()
 	end
-	puts "Kindly Enter the numbers Separated by space:"
+	puts "Kindly Enter the numbers Separated by , :"
 	numbers=gets.chomp
-	numbers=numbers.split(" ")
-	operator1=numbers[0]
-	operator2=numbers[1]
 
 	case choice
 	when "add"
-		add(operator1,operator2)
+		puts "Result #{Calculator.add(numbers)}"
 	when "sub"
-		subtract(operator1,operator2)
+		puts "Result #{Calculator.sub(numbers)}"
 	when "mul"
-		mulltiply(operator1,operator2)
+		puts "Result #{Calculator.mul(numbers)}"
 	when "div"
-		divide(operator1,operator2)
+		puts "Result #{Calculator.div(numbers)}"
 	else
 		puts"Sorry Wrong Choice!"	
 	end
@@ -76,5 +82,5 @@ def main()
 end
 
 if __FILE__ == $0
-	main()
+main()
 end

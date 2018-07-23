@@ -59,5 +59,12 @@ end
 		end
 	end
   end
-  
+
+  describe ".quit"do
+  	context"given quit"do
+  		it "it aborts execution"do
+  			expect(Calculator.quit).to eql("Thank You!!")
+  		end
+  	end
+  end
 end
