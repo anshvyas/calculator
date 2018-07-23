@@ -18,6 +18,14 @@ class Calculator
 		end
 	end
 
+	def self.mul(input)
+		if input.empty?
+			0
+		else
+			numbers = input.split(",").map { |num| num.to_i }
+			numbers.inject(1){|result,element| result*element}
+		end
+	end
 
 end
 

@@ -15,8 +15,6 @@ describe Calculator do
 		expect(Calculator.add("2,4")).to eql(6)
 		end
 	end
-
-
   end
 
   describe ".sub" do
@@ -32,6 +30,21 @@ describe Calculator do
   		expect(Calculator.sub("2,4")).to eql(-2)
   	end
   end
+end
 
+  describe ".mul"do
+  	context "given empty string"do
+  		it "return zero"do
+  			expect(Calculator.mul("")).to eql(0)
+		end
+	end
+
+	context "given 2 and 4 as input" do
+		it "return 8"do
+			expect(Calculator.mul("2,4")).to eql(8)
+		end
+	end	
   end
+
+  
 end
