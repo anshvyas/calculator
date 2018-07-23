@@ -1,7 +1,12 @@
 
 class Calculator
 	def self.add(input)
-		0
+		if input.empty?
+			0
+		else
+			numbers = input.split(",").map { |num| num.to_i }
+			numbers.inject(0){|result,element| result+element}
+		end
 	end
 end
 
