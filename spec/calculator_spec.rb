@@ -46,5 +46,18 @@ end
 	end	
   end
 
+  describe ".div"do
+  	context "given empty string"do
+  		it "return 0"do
+  			expect(Calculator.div("")).to eql(0)
+		end
+	end
+
+	context "given 4 and 2 as input"do
+		it"return 2"do
+			expect(Calculator.div("4,2")).to eql(2)
+		end
+	end
+  end
   
 end

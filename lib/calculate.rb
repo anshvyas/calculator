@@ -27,6 +27,15 @@ class Calculator
 		end
 	end
 
+	def self.div(input)
+		if input.empty?
+			0
+		else
+			numbers = input.split(",").map { |num| num.to_i }
+			result=numbers[0]/numbers[1]
+		end
+	end
+
 end
 
 def main()
