@@ -1,4 +1,10 @@
 
+class Calculator
+	def self.add(input)
+		0
+	end
+end
+
 def main()
 	
 	puts"Welcome to Calculator. Kindly Enter Your Choice"
@@ -34,9 +40,6 @@ def main()
 		puts"Sorry Wrong Choice!"	
 	end
 
-end
-
-class Calculator
 end
 
 if __FILE__ == $0
