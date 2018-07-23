@@ -18,4 +18,20 @@ describe Calculator do
 
 
   end
+
+  describe ".sub" do
+
+  	context "given empty string" do
+  		it "return zero" do
+  			expect(Calculator.sub("")).to eql(0)
+  		end
+  	end
+
+  	context "given 2 and 4 " do
+  		it "returns -2"do
+  		expect(Calculator.sub("2,4")).to eql(-2)
+  	end
+  end
+
+  end
 end

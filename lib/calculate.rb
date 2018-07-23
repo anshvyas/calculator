@@ -8,6 +8,17 @@ class Calculator
 			numbers.inject(0){|result,element| result+element}
 		end
 	end
+
+	def self.sub(input)
+		if input.empty?
+			0
+		else
+			numbers=input.split(",").map{ |num| num.to_i}
+			result=numbers[0]-numbers[1]
+		end
+	end
+
+
 end
 
 def main()
