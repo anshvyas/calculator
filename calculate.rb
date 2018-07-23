@@ -37,6 +37,9 @@ def main()
 end
 
 class Calculator
+	self.add(input)
+	0
+	end
 end
 
 if __FILE__ == $0
